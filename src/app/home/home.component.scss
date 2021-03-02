@@ -1,0 +1,27 @@
+
+.center{
+    text-align: center;
+}
+
+
+.calc-menu{
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 35px auto;
+
+    button{
+        margin: 5px;
+        width: 150px;
+        
+    &:hover{
+        background-color: #3f51b5;
+    }
+    }
+
+    @media (max-width: 800px){
+        max-width: 80%;
+    }
+}
