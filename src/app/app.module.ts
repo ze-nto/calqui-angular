@@ -16,6 +16,8 @@ import { MeioCulturaComponent } from './components/meio-cultura/meio-cultura.com
 import { DiluicaoComponent } from './components/diluicao/diluicao.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { MatInputModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatInputModule,
+    FormsModule
     
   ],
   providers: [],

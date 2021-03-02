@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Solucao } from 'src/app/models/solucao.model';
 
+
 @Component({
   selector: 'app-diluicao',
   templateUrl: './diluicao.component.html',
@@ -8,16 +9,20 @@ import { Solucao } from 'src/app/models/solucao.model';
 })
 
 export class DiluicaoComponent implements OnInit {
+
   entrada: Solucao = {
     concentracao: null, 
     unidade: '',
     volume: null
   }
+
   saida: Solucao ={
     concentracao: null,
     unidade: '',
     volume: null
   }
+
+  resultado: number = 0.00;
 
   constructor() { }
 
@@ -25,7 +30,18 @@ export class DiluicaoComponent implements OnInit {
   }
 
   calcularDiluicao(): void{
-    
+
+      let resultado = (this.saida.concentracao * this.saida.volume) / this.entrada.concentracao 
+      this.resultado = resultado
+  }
+
+  limpar(): void{
+    this.entrada.concentracao = null
+    this.entrada.volume = null
+    this.saida.concentracao = null
+    this.saida.volume = null
+    this.resultado = 0
+
   }
 
 }
