@@ -1,5 +1,5 @@
 <mat-card class=" calc-card mat-elevation-z4">
-    <h2 class="center">Porcentagem</h2>
+    <h2 class="center">Diluição</h2>
 
 
 
@@ -11,36 +11,37 @@
     <form>
         <h3> Solução de Entrada</h3>
         <div class="field-container">
-            <mat-form-field MatFormFieldControl appearance="fill" class="m10">
+            <mat-form-field MatFormFieldControl appearance="fill" class="mg10">
+                <mat-label>Concentração (mol/L)</mat-label>
                 <input 
                     matInput
+                    class="input"
                     [(ngModel)]="entrada.concentracao"
-                    name="concentracao1" 
-                    placeholder="Concentração"/>
+                    name="concentracao1" />
             </mat-form-field>
             <mat-form-field appearance="fill" class="mg10">
+                <mat-label>Volume (ml)</mat-label>
                 <input 
                     matInput 
                     name="Volume1"
-                    [(ngModel)]="entrada.volume" 
-                    placeholder="Volume">
+                    [(ngModel)]="entrada.volume" />
             </mat-form-field>
         </div>
         <h3> Solução de Saída</h3>
         <div class="field-container">
             <mat-form-field appearance="fill" class="mg10">
+                <mat-label>Concentração (mol/L)</mat-label>
                 <input 
                     matInput 
                     name="Concentracao2"
-                    [(ngModel)]="saida.concentracao" 
-                    placeholder="Concentração"/>
+                    [(ngModel)]="saida.concentracao" />
             </mat-form-field>
             <mat-form-field appearance="fill" class="mg10">
+                <mat-label>Volume (ml)</mat-label>
                 <input
                      matInput
                      name="volume2"
-                     [(ngModel)]="saida.volume" 
-                     placeholder="Volume">
+                     [(ngModel)]="saida.volume" />
             </mat-form-field>
         </div>
 

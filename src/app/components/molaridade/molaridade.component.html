@@ -1,3 +1,47 @@
 <mat-card class=" calc-card mat-elevation-z4">
     <h2 class="center">Molaridade</h2>
+
+
+
+<div class="resultado">
+    <p> {{ resultado }} g </p>
+  <!-- <small>da solução de entrada</small> -->
+</div>
+
+    <form>
+        <div class="field-container">
+            <mat-form-field MatFormFieldControl appearance="fill" class="mg10">
+                <mat-label>Concentração (mol/L)</mat-label>
+                <input 
+                    matInput
+                    class="input"
+                    [(ngModel)]="concentracao"
+                    name="Concentracao" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="mg10">
+                <mat-label>Volume (L)</mat-label>
+                <input 
+                    matInput 
+                    name="Volume"
+                    [(ngModel)]="volume" />
+            </mat-form-field>
+            <mat-form-field appearance="fill" class="mg10">
+                <mat-label>Massa Molecular do Soluto</mat-label>
+                <input 
+                    matInput 
+                    name="Volume"
+                    [(ngModel)]="massaMolar" />
+            </mat-form-field>
+        </div>
+       
+
+        <div class="btn-container">
+            <button mat-raised-button color="primary" (click)="calcularMolaridade(); $event.preventDefault()">Calcular</button>
+            <button mat-raised-button (click)="limpar(); $event.preventDefault()">Limpar</button>
+
+        </div>
+
+        
+    </form>
+
 </mat-card>

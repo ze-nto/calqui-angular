@@ -31,8 +31,12 @@ export class DiluicaoComponent implements OnInit {
 
   calcularDiluicao(): void{
 
+    if(this.entrada.concentracao){
       let resultado = (this.saida.concentracao * this.saida.volume) / this.entrada.concentracao 
-      this.resultado = resultado
+      this.resultado = Number(resultado.toFixed(2))
+    } else{
+      this.resultado = 0
+    }
   }
 
   limpar(): void{
