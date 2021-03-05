@@ -10,10 +10,15 @@
 
 }
 
+
 .btn-container{
     display: flex;
+    max-width: 300px;
     justify-content: space-around;
     padding: 0 50px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .field-container{
